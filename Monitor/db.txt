@@ -1,0 +1,33 @@
+CREATE TABLE `cpu_infomation` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `timetick` BIGINT DEFAULT NULL,
+    `pid` INT  DEFAULT NULL,
+    `tid` INT  DEFAULT NULL,
+    `cpu_use` TINYINT DEFAULT NULL,
+    PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE cpu_infomation ADD INDEX pid_index (pid);
+
+
+CREATE TABLE `memory_infomation` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `timetick` BIGINT DEFAULT NULL,
+    `pid` INT  DEFAULT NULL,
+    `cpu_use` INT DEFAULT NULL,
+    PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE memory_infomation ADD INDEX pid_index (pid);
+
+CREATE TABLE `net_flow` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `timetick` BIGINT DEFAULT NULL,
+    `pid` INT  DEFAULT NULL,
+    `download_speed` INT DEFAULT NULL,
+	`update_speed` INT DEFAULT NULL,
+    PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE net_flow ADD INDEX pid_index (pid);
+

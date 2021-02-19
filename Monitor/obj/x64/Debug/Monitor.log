@@ -1,0 +1,43 @@
+﻿  Validating sources
+  Copying sources remotely to '49.234.46.106'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  Log.cpp
+  Linking objects
+D:\Projects\Monitor\Monitor\obj\x64\Debug\Log.o : error : In function `Logger::Flush_Messagebuff(std::string, std::queue<Message, std::deque<Message, std::allocator<Message> > >&&)':
+D:\Projects\Monitor\Monitor\Log.cpp(116): error : undefined reference to `curl_easy_init'
+D:\Projects\Monitor\Monitor\Log.cpp(138): error : undefined reference to `curl_easy_setopt'
+D:\Projects\Monitor\Monitor\Log.cpp(155): error : undefined reference to `curl_formadd'
+D:\Projects\Monitor\Monitor\Log.cpp(158): error : undefined reference to `curl_easy_setopt'
+D:\Projects\Monitor\Monitor\Log.cpp(161): error : undefined reference to `curl_easy_setopt'
+D:\Projects\Monitor\Monitor\Log.cpp(162): error : undefined reference to `curl_easy_setopt'
+D:\Projects\Monitor\Monitor\Log.cpp(163): error : undefined reference to `curl_easy_setopt'
+D:\Projects\Monitor\Monitor\Log.cpp(164): error : undefined reference to `curl_easy_setopt'
+D:\Projects\Monitor\Monitor\obj\x64\Debug\Log.o : error : /root/projects/Monitor/Log.cpp:165: more undefined references to `curl_easy_setopt' follow
+D:\Projects\Monitor\Monitor\obj\x64\Debug\Log.o : error : In function `Logger::Flush_Messagebuff(std::string, std::queue<Message, std::deque<Message, std::allocator<Message> > >&&)':
+D:\Projects\Monitor\Monitor\Log.cpp(170): error : undefined reference to `curl_easy_perform'
+D:\Projects\Monitor\Monitor\Log.cpp(175): error : undefined reference to `curl_easy_strerror'
+D:\Projects\Monitor\Monitor\Log.cpp(180): error : undefined reference to `curl_formfree'
+D:\Projects\Monitor\Monitor\Log.cpp(182): error : undefined reference to `curl_slist_free_all'
+D:\Projects\Monitor\Monitor\Log.cpp(183): error : undefined reference to `curl_easy_cleanup'
+D:\Projects\Monitor\Monitor\obj\x64\Debug\Log.o : error : In function `Logger::lock_init()':
+D:\Projects\Monitor\Monitor\Log.cpp(211): error : undefined reference to `pthread_mutexattr_init'
+D:\Projects\Monitor\Monitor\obj\x64\Debug\MonitorNotify.o : error : In function `MonitorNotify::ReadConfigFile(std::string)':
+D:\Projects\Monitor\Monitor\MonitorNotify.cpp(7): error : undefined reference to `curl_easy_init'
+D:\Projects\Monitor\Monitor\MonitorNotify.cpp(12): error : undefined reference to `curl_easy_setopt'
+D:\Projects\Monitor\Monitor\MonitorNotify.cpp(13): error : undefined reference to `curl_easy_setopt'
+D:\Projects\Monitor\Monitor\MonitorNotify.cpp(15): error : undefined reference to `curl_easy_perform'
+D:\Projects\Monitor\Monitor\MonitorNotify.cpp(20): error : undefined reference to `curl_easy_strerror'
+D:\Projects\Monitor\Monitor\MonitorNotify.cpp(22): error : undefined reference to `curl_easy_cleanup'
+D:\Projects\Monitor\Monitor\MonitorNotify.cpp(25): error : undefined reference to `curl_easy_cleanup'
+D:\Projects\Monitor\Monitor\obj\x64\Debug\NetMonitor.o : error : In function `NetMonitor::GetSumOfNetStream()':
+D:\Projects\Monitor\Monitor\NetMonitor.cpp(281): error : undefined reference to `pcap_lookupdev'
+D:\Projects\Monitor\Monitor\NetMonitor.cpp(290): error : undefined reference to `pcap_open_live'
+D:\Projects\Monitor\Monitor\NetMonitor.cpp(305): error : undefined reference to `pcap_lookupnet'
+D:\Projects\Monitor\Monitor\NetMonitor.cpp(307): error : undefined reference to `pcap_open_live'
+D:\Projects\Monitor\Monitor\NetMonitor.cpp(309): error : undefined reference to `pcap_compile'
+D:\Projects\Monitor\Monitor\NetMonitor.cpp(310): error : undefined reference to `pcap_setfilter'
+D:\Projects\Monitor\Monitor\NetMonitor.cpp(317): error : undefined reference to `pcap_loop'
+D:\Projects\Monitor\Monitor\NetMonitor.cpp(319): error : undefined reference to `pcap_close'
+collect2 : error : ld returned 1 exit status
